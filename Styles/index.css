@@ -1,0 +1,164 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    /* display: flex; */
+}
+
+#bodyDiv{
+    width: 100%;
+    margin-top: 70px;
+    height: 1000px;
+    padding: 0%;
+    
+}
+
+#div1{
+    display: flex;
+    background-color: aqua;
+    /* border: 5px solid green;  */
+    color: white;
+    width: 100%;
+    height: 700px;
+    padding: 0%;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/07/19/44/girl-2607110_1280.jpg");
+    background-repeat: no-repeat;
+     background-attachment: local;  
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    #div1>div{
+        text-align: center;
+    }
+
+    #div1>div>h1{
+        font-size: 70px;
+        text-align: center;
+        /* width: 70%; */
+    }
+
+    #div1>div>button{
+        font-size: 20px;
+        text-align: center;
+        padding: 15px 90px 15px 90px;
+        background-color: #25a9e1;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        /* width: 70%; */
+    }
+
+    #searchbox{
+        background-color: #041728;
+        margin-top: 0px;
+        position: fixed;
+        width: 97%;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: none;
+        justify-content: center;
+    }
+
+    #searchbox>input{
+        width: 95%;
+    }
+
+    #cancleSrch{
+        display: none;
+    }
+
+    form{
+        width: 30%;
+        /* border: 1px solid blue; */
+        margin: auto;
+        margin-top: 100px;
+        padding: 30px;
+        background-color: white;
+        margin-left: 35%;
+        display: none;
+        position: fixed;
+
+        /* background-color: #041728;
+        margin-top: 120px;
+        position: fixed;
+        width: 97%;
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        justify-content: center; */
+        /* display: none; */
+    }
+
+    form>div{
+        /* margin-top: -100px; */
+        /* border: 1px solid rgb(255, 0, 153); */
+        /* flex-direction: column; */
+        /* padding: 30px; */
+        width: 100%;
+        /* background-color: white; */
+        margin-top: 0%;
+        margin: auto;
+        
+    }
+
+    input[type="email"],
+    input[type="password"]
+    {
+        width: 95%;
+        padding: 2%;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    input[type="submit"]{
+        width: 100%;
+        /* padding: 2%; */
+        font-size: 20px;
+        text-align: center;
+        padding: 15px 90px 15px 90px;
+        background-color: #25a9e1;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+
+    
+
+    form>div>p:nth-child(1){
+        text-align: end;
+    }
+    form>div>p:nth-child(7),form>div>h1{
+        text-align: center;
+    }
+
+    #btnSignInFB{
+        background-color: #37518a;
+    }
+
+    #div1+div{
+        background-color:#25a9e1;
+        margin-top: 0px;
+        padding-left: 40px;
+    }
+    #div1+div>div{
+        width: 40%;
+        padding:40px;
+    }
+    .btnclass{
+        background-color: #041728;
+        font-size: 20px;
+        text-align: center;
+        padding: 15px 90px 15px 90px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+    #div1+div>div>h1{
+        color: white;
+    }
+
+    .para{
+        font-size: 20px;
+    }
