@@ -7,7 +7,7 @@ body{
 #bodyDiv{
     width: 100%;
     margin-top: 70px;
-    height: 1000px;
+    height: auto;
     padding: 0%;
     
 }
@@ -161,4 +161,84 @@ body{
 
     .para{
         font-size: 20px;
+    }
+
+    #Div3{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);   
+        grid-template-rows: repeat(3,1fr);
+        gap: 20px;
+    }
+   
+    #Div3>div{
+        padding: 20px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .btnDiv3{
+        background-color: #25a9e1;
+        font-size: 20px;
+        text-align: center;
+        width: 40%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .iconsDiv3{
+        justify-content: center;
+        text-align: center;
+    }
+    .iconsDiv3>i{
+        font-size: 1000%;
+        color:  #25a9e1;
+    }
+
+    #Div4{
+        display: flex;
+        background-color: rgb(177, 175, 175);
+        height: 200px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #Div4>div{
+        display: grid;
+        grid-template-columns: repeat(11,1fr);
+        grid-template-rows: repeat(1,auto);
+        gap: 5px;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    #Div4>div>div:nth-child(11){
+        background-color:rgb(177, 175, 175);
+        color: black;
+    }
+
+    #Div4>div>div{
+        padding: 5px;
+        font-size: 20px;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: white;
+
+    }
+
+
+    #div4Heading{
+        text-align: center;
+        margin-top: -30px;
     }
