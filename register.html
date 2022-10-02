@@ -51,7 +51,7 @@
         <input placeholder="My gym" type="text" id="Gym">
 
         <label for="">Your descreption for profile page</label>
-        <input placeholder="My gym" type="text" id="Gym">
+        <input placeholder="My gym" type="text" id="disGym">
         
         <input id="submit" type="submit" value="Submit">
     </form>
@@ -89,3 +89,89 @@
      
 </body>
 </html>
+<script>
+
+    let arr = [];
+
+    document.querySelector("#aboutUs").addEventListener("click",aboutFun)
+
+    document.querySelector("#contacts").addEventListener("click",contactsFun)
+    document.querySelector("#trmSrvs").addEventListener("click",trmsFun)
+    document.querySelector("#privacies").addEventListener("click",privacyFun)
+    document.querySelector("#prices").addEventListener("click",pricesFun)
+    document.querySelector("#imgAndroid").addEventListener("click",imgAndroidFun)
+    document.querySelector("#imgIOS").addEventListener("click",iosFun)
+    document.querySelector("#imgFB").addEventListener("click",fbFun)
+
+    document.querySelector("#home").addEventListener("click",function(){
+        window.open("index.html","_self");
+    })
+
+
+    let form = document.querySelector("#form");
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        let obj = {
+         email: document.querySelector("#email").value,
+         myname: document.querySelector("#myname").value,
+         gender: document.querySelector("#gender").value,
+         dateOfBerth: document.querySelector("#dateOfBerth").value,
+         pass: document.querySelector("#password").value,
+         confPass: document.querySelector("#confirmPassword").value,
+         units: document.querySelector("#units").value,
+         timeZone: document.querySelector("#tnZone").value,
+         myGym: document.querySelector("#Gym").value,
+         discre: document.querySelector("#disGym").value,
+        };
+    
+        console.log(obj)
+
+        if(obj.email!=="" && obj.myname!=="" && obj.gender!=="" && obj.dateOfBerth!=="" && obj.pass!=="" && obj.confPass!=="" && obj.units!=="" && obj.timeZone!=="" && obj.myGym!=="" && obj.discre!==""){
+            if(obj.pass===obj.confPass){
+                arr.push(obj)
+                localStorage.setItem("registerGym",JSON.stringify(arr));
+                alert("successfully registered, Goto home page and signIn");
+                window.open("index.html", '_self');
+            }else{
+                alert("confirm password don not match the password correct")
+            }
+        }else{
+            alert("Fill all the details");
+        }
+
+    })
+
+    function contactsFun(){
+        window.open("https://www.gymwolf.com/contact", '_blank');
+    }
+
+    function trmsFun(){
+        window.open("", '_blank');
+    }
+
+    function privacyFun(){
+        window.open("https://www.gymwolf.com/privacy", '_blank');
+    }
+
+    function pricesFun(){
+        window.open("https://www.gymwolf.com/pricing", '_blank');
+    }
+
+    function imgAndroidFun(){
+        window.open("https://play.google.com/store/apps/details?id=com.mooncascade.gymwolf", '_blank');
+    }
+
+    function iosFun(){
+        window.open("https://apps.apple.com/us/app/gymwolf/id1228119580", '_blank');
+    }
+
+    function fbFun(){
+        window.open("https://www.facebook.com/gymwolf", '_blank');
+    }
+
+    function aboutFun(){
+        window.open("https://www.gymwolf.com/about", '_blank');
+    }
+
+</script>
