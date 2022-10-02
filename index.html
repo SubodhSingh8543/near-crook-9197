@@ -43,33 +43,33 @@
         <div id="div1">
            <div>
             <h1> A better way to track your workouts</h1>
-            <button>Start free</button>
+            <button id="startFree">Start free</button>
            </div>
         </div>
         <div>
             <div>
                 <h1>Online personal trainer</h1>
                 <p class="para">Gymwolf has certified personal trainers that provide you with customised workout plans depending on your goals. Our trainers track your progress, coach and motivate you daily through our web and smartphone app.</p>
-                <button class="btnclass">Learn more</button>
+                <button id="btnlearnMore" class="btnclass">Learn more</button>
             </div>
         </div>
         <div id="Div3">
             <div>
                 <h1>Features</h1>
                 <p>Gymwolf is a workout tracking tool. Add workouts, create your own customized workout plans or find suitable plan from other users. Accomplish your goals with motivation from personal trainer and committed training.</p>
-                <button class="btnDiv3">Take a tour</button>
+                <button id="btndiv1of3" class="btnDiv3">Take a tour</button>
             </div>
             <div class="iconsDiv3"><i class="fa-solid fa-chart-line"></i></div>
             <div class="iconsDiv3"><i class="fa-solid fa-chart-line"></i></div>
             <div>
                 <h1>See your progress</h1>
                 <p>Gymwolf provides different graphs that help you track your progress. There are graphs for gym workouts, cardio workouts and bodyweight. The graphs are highly customizable: you can select the date range, exercise and group the results by month, week or single workout.</p>
-                <button class="btnDiv3">Take a tour</button>
+                <button id="btndiv2of3" class="btnDiv3">Take a tour</button>
             </div>
             <div>
                 <h1>Database with 300+ exercises</h1>
                 <p>Gymwolf has a database with over 300 exercises. The exercises come with detailed descriptions, tips and step-by-step images. If you don't find a exercise from our database, then you can also add your own exercises.</p>
-                <button class="btnDiv3">Take a tour</button>
+                <button id="btndiv3of3" class="btnDiv3">Take a tour</button>
             </div>
             <div class="iconsDiv3"><i class="fa-light fa-table"></i></div>
         </div>
@@ -139,7 +139,54 @@
     document.querySelector("#imgIOS").addEventListener("click",iosFun)
     document.querySelector("#imgFB").addEventListener("click",fbFun)
 
+    document.querySelector("#btnlearnMore").addEventListener("click",lrnMoreFun)
+    document.querySelector("#btndiv1of3").addEventListener("click",btndiv1of3Fun)
+    document.querySelector("#btndiv2of3").addEventListener("click",btndiv2of3Fun)
+    document.querySelector("#btndiv3of3").addEventListener("click",btndiv3of3Fun)
+
+    document.querySelector("#startFree").addEventListener("click",startFun)
+
+    let loginData = JSON.parse(localStorage.getItem("registerGym"));
+
     let form = document.querySelector("form")
+
+    form.addEventListener("submit",loginFun)
+
+    function lrnMoreFun(){
+        window.open("https://www.gymwolf.com/trainer","_self");
+    }
+
+    function btndiv1of3Fun(){
+        window.open("https://www.gymwolf.com/tour","_self");
+    }
+
+    function btndiv2of3Fun(){
+        window.open("https://www.gymwolf.com/tour","_self");
+    }
+
+    function btndiv3of3Fun(){
+        window.open("https://www.gymwolf.com/exercises","_self");
+    }
+
+    function startFun(){
+        window.open("register.html","_self")
+    }
+    
+    function loginFun(event){
+        event.preventDefault();
+        let Email = document.querySelector("#emailSI").value;
+        let Password = document.querySelector("#pass").value;
+
+        loginData.forEach(function(el,i){
+            if(Email===el.email && Password===el.pass){
+                console.log("yes");
+                alert("successfully Signed In")
+            }else if(Email!==el.email || Password!==el.pass){
+                alert("incorrect email or password")
+            }
+        //   console.log(Email,el.email,Password,el.pass);
+        })
+    }
 
     function registerFun(){
         window.open("register.html", '_blank');
